@@ -39,8 +39,6 @@ $$
 
 We can therefore reuse the concept of a fast inverse square root approximation algorithm from the source code of [Quake III Arena](https://github.com/id-Software/Quake-III-Arena/blob/master/code/game/q_math.c). It uses a bit-level approximation followed by a Newton-Raphson refinement step. It is fast and avoids a direct call to the standard library square root implementation.
 
-This algorithm was therefore adapted to the fourth root __for single-precision only__. It removes the need to include `math.h` in this case, as a magic constant (`0x2f9a8354`) was computed, and the Newton-Raphson iteration was modified to approximate \(\sqrt[4]{x}\) directly.
-
 This algorithm was adapted to compute the fourth root __for single-precision floating-point values only__. It removes the need to include `math.h` in this case, as a dedicated magic constant (`0x2f9a8354`) and a modified Newton-Raphson iteration to approximate \(\sqrt[4]{x}\) can be used, with:
 $$
 y_{n+1} = \frac{1}{4} \left(3 y_{n} + \frac{x}{{y_n}^3} \right)~.
