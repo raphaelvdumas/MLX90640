@@ -1,3 +1,3 @@
 # MLX90640
 
-This is a test.
+For now, only the [computation tricks](compute_tricks.md) are explained.
