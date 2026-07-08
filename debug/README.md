@@ -34,8 +34,13 @@ ENDIANNESS = '<'
 ## C debugging functions
 
 The following functions provide access to internal driver data for debugging:
-- `mlx90640_debug_calib_pixel`: access each pixel's calibration parameters. You only need to call this function once.
-- `mlx90640_debug_calib_param`: access global calibration parameters. You only need to call this function once.
+- `mlx90640_debug_calib_pixel`: access each pixel's calibration parameters.
+- `mlx90640_debug_calib_param`: access global calibration parameters.
 - `mlx90640_debug_i2c_buffer_data`: access __last__ raw I2C buffer data. You need to call this function _after_ getting a frame with I2C.
 - `mlx90640_debug_frame_param`: access __last__ frame parameters required to reconstruct an image ($\Delta T_a$, $\Delta V_{dd}$, etc.). 
 - `mlx90640_debug_image`: access __last__ computed object temperature image.
+
+
+An example visualization of the debug data for `mlx90640_debug_calib_pixel` is shown below. It can be useful to inspect it once to check if all calibration pixels are properly set before computing an actual object temperature.
+
+![MLX90640debug](../docs/images/debug_calib_pixel.png)
