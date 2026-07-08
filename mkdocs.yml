@@ -1,0 +1,20 @@
+site_name: MLX90640
+site_url: https://raphaelvdumas.github.io/MLX90640/
+site_author: Raphael Dumas
+site_description: Documentation of the MLX90640 driver
+
+# Repository
+repo_name: raphaelvdumas/MLX90640
+repo_url: https://github.com/raphaelvdumas/MLX90640/
+
+# Copyright
+copyright: Copyright &copy; 2026 Raphael Dumas
+
+theme:
+  name: material
+
+  font:
+    text: Roboto
+    code: Roboto Mono
+  palette:
+    primary: black
